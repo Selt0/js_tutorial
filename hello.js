@@ -31,3 +31,9 @@ for (let i = 0; i < soliloquy.length; i++) {
 }
 
 //one powerful technique is to write a test for the functionality we want, then get it passing any way we can, and then refactor the code to use a more elegant method. The second step in this process (called test-driven development, or TDD) often involves writing inelegant but easy-to-understand code—
+
+let char = 'honey badger'.split('');
+
+for (let i = 0; i < char.length; i++) {
+  console.log(char[i]);
+}
