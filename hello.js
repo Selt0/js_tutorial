@@ -81,3 +81,39 @@ a.join("");
 //"antbatcat42"
 total == a.join("");
 //true
+
+//Chapter 4
+
+let zipCode = new RegExp("\\d{5}");
+
+let result = zipCode.exec("Beverly Hills 90210");
+//[ '90210', index: 14, input: 'Beverly Hills 90210' ]
+result.length;
+//1
+
+zipCode = /\d{5}/; //another way to right it
+
+// regex for whitespace is /s . It works on tabs, multiple spaces, etc
+"ant bat cat duck".split(/\s+/);
+//['ant', 'bat', 'cat', 'duck']
+
+//objects
+let user {};
+//{};
+user['firstName'] = 'Michael'  //key 'firstName', value 'Michael'
+//'Michael'
+user['lastName'] = 'Martinez' //key 'lastName', value 'Martinez'
+
+user.firstName;
+//Michael
+user['firstName'];
+//Michael
+
+let myCar = new Object({Model: 'Corolla', Make: 'Toyota', Year: '2015'});
+
+let user2 = new Object();
+user2.firstName = 'Joe';
+user2.lastName = 'Jeffrey';
+
+user2;
+//Object { firstName: "Joe", lastName: "Jeffrey" }
