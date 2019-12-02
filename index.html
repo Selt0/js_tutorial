@@ -9,9 +9,33 @@
 <body>
   <h1>Hello, world!</h1>
   <p>This page includes an alert written in JS.</p>
+  <p>Click the button to find out my birthday :)</p>
+  <button>Birthday</button>
 
   <script>
-    alert("hello, world!")
+  
+    let now = new Date();
+    let moonLanding = new Date('July 20, 1969 20:18');
+    let birthday2 = new Date('July 8, 1994');
+    const button = document.querySelector('button');
+
+    alert(`${greeting(now)}`); 
+
+    button.addEventListener('click', function() {
+      const birthday = new Date('July 8 1994').toLocaleString('en-US');
+      alert(birthday);
+    });
+
+    //returns the day of the week for the given date
+    function dayName(date) {
+      const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];    
+      return daysOfTheWeek[date.getDay()];
+    }
+
+    //simple function to that has a string to greet
+    function greeting(date) {
+      return `Hello, World! Happy ${dayName(date)}.`;
+    }
   </script>
 </body>
 </html>

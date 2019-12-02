@@ -117,3 +117,34 @@ user2.lastName = 'Jeffrey';
 
 user2;
 //Object { firstName: "Joe", lastName: "Jeffrey" }
+
+//chapter 5
+function stringMessage(string) {
+  if (string) {
+    return 'The string is nonempty.';
+  } else {
+    return "it's an empty string!";
+  }
+}
+
+//the function argument is irrelevant. It can be  any other variable name
+function stringMessage(asfd) {
+  if (asfd) {
+    return 'The string is nonempty.';
+  } else {
+    return "it's an empty string!";
+  }
+}
+//works the same
+
+//fat arrow
+
+function name(arg){
+  //code
+}
+
+//same as
+
+let name = (arg) => {
+  //code
+}
