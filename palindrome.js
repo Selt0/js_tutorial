@@ -55,7 +55,7 @@ function Phrase(content) {
 
   //method toLowerCase()
   this.processor = function(string) {
-    string.toLowerCase();
+    return string.toLowerCase();
   }
 
   //method to return processed content 
