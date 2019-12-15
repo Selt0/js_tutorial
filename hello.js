@@ -118,6 +118,7 @@ user2.lastName = 'Jeffrey';
 user2;
 //Object { firstName: "Joe", lastName: "Jeffrey" }
 
+
 //chapter 5
 function stringMessage(string) {
   if (string) {
@@ -148,3 +149,23 @@ function name(arg){
 let name = (arg) => {
   //code
 }
+
+//forEach
+
+for (let i = 0; i <array.length; i++) {
+  console.log(array[i]);
+}
+
+//same as
+array.forEach(function(element) {
+  console.log(element);
+});
+
+[42, 15, "bar", "foo"].forEach(function(element) {
+  console.log(element);
+});
+
+//42
+//15
+//"bar"
+//"foo"
