@@ -1,0 +1,21 @@
+#!/usr/local/bin/node
+
+let fs = require('fs');
+let Phrase = require('selt0-palindrome');
+let palindromes = [];
+
+let text = fs.readFileSync('phrases.txt', 'utf-8');
+text.split('\n').forEach(function(line) {
+  let phrase = new Phrase(line);
+  if (phrase.palindrome()) {
+    console.log('palindrome detected:', line);
+    palindromes.push(line);
+  }
+});
+
+fs.writeFile('palindromes.txt', palindromes.join('\n'), function(err) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log('Palindromes saved!');
+})
